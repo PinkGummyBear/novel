@@ -1,0 +1,91 @@
+body {
+  background: #121212;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game {
+  width: 700px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#statsBox {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #f1fa8c;
+}
+
+#nameBox {
+  font-weight: bold;
+  color: #8be9fd;
+  margin-bottom: 10px;
+}
+
+#textBox {
+  min-height: 120px;
+  font-size: 18px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+#choices {
+  margin-top: 20px;
+}
+
+.choice {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.choice:hover {
+  background: rgba(255,255,255,0.2);
+}
+#curriculumModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;          /* kisebb szélesség */
+  max-height: 70vh;      /* max magasság a képernyő 70%-a */
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 12px;
+  padding: 20px;
+  overflow-y: auto;      /* ha túl sok a tartalom, görgethető lesz */
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  display: none;         /* alapból rejtve */
+  flex-direction: column;
+  z-index: 1000;
+}
+
+/* A lista belül */
+#curriculumList {
+  max-height: 60vh;      /* tartalom max magassága */
+  overflow-y: auto;      /* görgethető */
+}
+
+/* Bezáró gomb */
+#closeCurriculum {
+  align-self: flex-end;
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+#closeCurriculum:hover {
+  background: rgba(255,255,255,0.2);
+}
